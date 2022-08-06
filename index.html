@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porcentajes y Descuentos</title>
+  <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container_header">
+      <h1>Porcentajes y Descuentos</h1>
+      <p>Este es el segundo taller del curso de Javascritp</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container_section">
+      <h2>Calcula el precio a <span>pagar de tus productos</span></h2>
+      <form action="" class="form_container">
+        <div id="containerCoupons" class="container_coupons">
+          <!--Container hidden-->
+          <p class="label">Digite o elija su cupón de descuento:</p>
+          <input id="inputCouponsDiscount" list="couponsDiscount">
+          <datalist id="couponsDiscount">
+            <option value="JuanDc_es_Batman"></option>
+            <option value="pero_no_le_digas_a_nadie"></option>
+            <option value="es_un_secreto"></option>
+          </datalist>
+        </div>
+        <div class="container_input_label">
+          <label for="inputPrice" class="label">
+            Escriba el precio de su producto:
+          </label>
+          <input id="inputPrice" type="number">
+
+          <label id="labelDiscount" for="inputDiscount" class="label">
+            Escriba el descuento de su producto:
+          </label>
+          <input id="inputDiscount" type="number">
+        </div>
+        <div class="container_result">
+          <p class="label">
+            El precio con descuento es:
+          </p>
+          <input type="text" id="resultPrice" readonly>
+        </div>
+
+        <div class="container_buttons">
+          <button id="hiddenButtonCalculatePrice" class="buttonPriceWhithoutCoupon" type="button"
+            onclick="priceWithDiscount()">
+            Calcular el pecio con descuento
+          </button>
+          <button class="buttonCoupon" id="hiddingButton" type="button">
+            Cupón
+          </button>
+          <button class="buttonCoupon hidden" id="buttonHidden" type="button"
+            onclick="couponsButton(),priceWithDiscount()">
+            Usar su cupón con descuento
+          </button>
+          <button id="buttonClean" class="button_clean" type="button" onclick="clean()">
+            Limpiar
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="./main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inria Serif', serif;
+}
+
+.header {
+  width: 100%;
+  height: max-content;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.section {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-auto-rows: auto;
+  color: white;
+}
+
+.container_section {
+  width: 600px;
+  height: max-content;
+  background: rgba(190, 159, 209, 0.78);
+  display: flex;
+  flex-direction: column;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.container_section h2 {
+  width: 70%;
+  align-self: center;
+  font-size: 28px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.container_section h2 span {
+  display: block;
+}
+
+.form_container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.container_coupons {
+  display: none;
+}
+
+.buttonCoupon.hidden,
+.buttonPriceWhithoutCoupon.hidden {
+  display: none;
+}
+
+.buttonCoupon.visible {
+  display: block;
+}
+
+.container_input_label,
+.container_coupons.active,
+.container_result {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 10px;
+  grid-auto-rows: auto;
+}
+
+
+.form_container .label {
+  font-size: 22px;
+  align-self: center;
+}
+
+#inputPrice,
+#inputDiscount,
+#resultPrice,
+#inputCouponsDiscount {
+  width: 150px;
+  height: 40px;
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  border: none;
+  background-color: #A56E96A6;
+  border-radius: 10px;
+}
+
+#inputCouponsDiscount {
+  font-size: 12px;
+  width: 190px;
+  padding: 5px;
+}
+
+.container_buttons {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container_buttons button:nth-child(2),
+.button_clean.flexEnd {
+  justify-self: end;
+}
+
+button {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: none;
+  background-color: #C444C7;
+  color: white;
+  border-radius: 10px;
+  position: relative;
+  bottom: 0;
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
